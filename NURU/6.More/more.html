@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>nuru</title>
-         <link rel="stylesheet" href="main.css" />
-    </head>
-    <body>
-    
-        <h1>More</h1>
-        
-        <ul>
-        <li><a href="#">Web Design</a></li>
-        <p>we are a solution to your problem,visit us and get your designed website that will help you at a cheaper price</p>
-        <li><a href="#">Marketing</a></li>
-        <p>come market with us today!! we give 100% commitment in marketing our customers products</p>
-        <li><a href="#">Mobile App</a></li>
-        <p>Acces all your services anywhere,anytime!! get to know how you will access services through your phone,visit us today</p>
-        </ul>
-    
-    </body>
+<head>
+  <title>My Web Page</title>
+  <style>
+    #more-button {
+      background-color: blue;
+      color: dark green;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    #additional-content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>nuru!</h1>
+
+  <p>
+    <h1>Web designing</h1>
+    <h2>Computer packages</h2>
+    <h3>Mobile app</h3>
+    <h4>Marketting</h4>
+</p>
+
+  <button id="more-button">More</button>
+
+  <div id="additional-content">
+   <strong>Visit us today and experience our good services.</strong> 
+     We deign websites best suit for you...
+     Learn computer packages. 
+     Explore the technology world from anywhere... we have mobile app services that can help you do this.
+     Grow your business by marketting with us,,,we give 100% commitment to our client's task.
+     Design your own program,,,,learn how to code.
+  </div>
+
+  <script>
+    document.getElementById("more-button").addEventListener("click", function() {
+      document.getElementById("additional-content").style.display = "block";
+    });
+  </script>
+
+</body>
 </html>
