@@ -66,17 +66,28 @@
 </head>
 <body>
   <center><h1>Welcome, Login to Continue</h1></center>
-  <form>
+  <form id="loginForm" action="main.html">
     <div class="container login-container">
       <label>Username:</label>
       <input type="text" placeholder="Enter Username" name="username" required>
       <label>Password:</label>
       <input type="password" placeholder="Enter Password" name="password" required>
-      <button type="submit">Login</button>
+      <button type="submit" >Login</button>
       <input type="checkbox" checked="checked">Remember me
       <button type="button" class="cancelbtn">Cancel</button>
       <p>Don't have an account? <a href="pages/register.html">Register</a></p>
     </div>
   </form>
+
+    <script>
+    // JavaScript to handle form submission and redirection
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+      
+      // Redirect to main.html
+      window.location.href = "main.html";
+    });
+  </script>
 </body>
 </html>
