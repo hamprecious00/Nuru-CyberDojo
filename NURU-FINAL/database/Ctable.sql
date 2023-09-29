@@ -1,0 +1,9 @@
+CREATE TABLE user {
+ID INT PRIMARY KEY,
+fname VARCHAR(255),
+lname VARCHAR(255),
+username VARCHAR(255),
+email VARCHAR(255),
+password VARCHAR(255),
+
+};
