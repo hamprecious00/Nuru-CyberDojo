@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Form</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            margin: 0 auto;
+            width: 300px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        #password {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <div class="password-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <span class="toggle-password" id="togglePassword" onclick="togglePasswordField()">&#128065;</span>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission and password toggle
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Redirect to main.html
+            window.location.href = "main.html";
+        });
+
+        function togglePasswordField() {
+            var passwordInput = document.getElementById("password");
+            var togglePasswordButton = document.getElementById("togglePassword");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePasswordButton.textContent = "&#128064;"; // Show eye closed
+            } else {
+                passwordInput.type = "password";
+                togglePasswordButton.textContent = "&#128065;"; // Show eye open
+            }
+        }
+    </script>
+</body>
+</html>
